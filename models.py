@@ -41,3 +41,6 @@ class Config(BaseModel):
     label = fields.CharField(max_length=200)
     key = fields.CharField(max_length=20)
     value = fields.JSONField()
+
+class Info(BaseModel):
+    msg1=fields.CharField(max_length=32)
