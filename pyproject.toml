@@ -9,6 +9,10 @@ python = "^3.8"
 tortoise-orm = "^0.16.15"
 aerich = {git = "https://github.com/ShirleyChau/aerich.git"}
 
+[[tool.poetry.source]]
+name="tuna"
+url="https://pypi.tuna.tsinghua.edu.cn/simple/"
+
 [tool.poetry.dev-dependencies]
 
 [build-system]
