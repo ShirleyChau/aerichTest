@@ -23,11 +23,11 @@ class User(BaseModel):
 class Category(BaseModel):
     slug = fields.CharField(max_length=200)
     name = fields.CharField(max_length=200)
-    user = fields.ForeignKeyField("models.User", description="User")
+    user = fields.ForeignKeyField("diff_models.User", description="User")
 
 
 class Product(BaseModel):
-    categories = fields.ManyToManyField("models.Category")
+    categories = fields.ManyToManyField("diff_models.Category")
     name = fields.CharField(max_length=50)
     view_num = fields.IntField(description="View Num")
     sort = fields.IntField()
@@ -44,3 +44,16 @@ class Config(BaseModel):
 
 class Info(BaseModel):
     msg3=fields.CharField(max_length=32)
+
+from tortoise import Model, fields
+
+MAX_VERSION_LENGTH = 255
+
+
+class Aerich(Model):
+    version = fields.CharField(max_length=MAX_VERSION_LENGTH)
+    app = fields.CharField(max_length=20)
+
+    class Meta:
+        ordering = ["-id"]
+

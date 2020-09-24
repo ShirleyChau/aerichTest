@@ -7,11 +7,8 @@ authors = ["ShirleyChau <2254751892@qq.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 tortoise-orm = "^0.16.15"
-aerich = {git = "https://github.com/ShirleyChau/aerich.git"}
-
-[[tool.poetry.source]]
-name="tuna"
-url="https://pypi.tuna.tsinghua.edu.cn/simple/"
+typer = "^0.3.2"
+aiomysql = "^0.0.20"
 
 [tool.poetry.dev-dependencies]
 
